@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Card</title>
+  <link rel="stylesheet" href="../static/home.css">
+  <style>
+    .destination-list {
+      margin: 40px 0;
+      padding: 20px;
+      background-color: #f9f9f9;
+    }
+
+    .section-title {
+      font-size: 2rem;
+      margin-bottom: 20px;
+      text-align: center;
+      color: #333;
+    }
+
+    .destination-item {
+      margin-bottom: 30px;
+      padding: 15px;
+      border: 1px solid #ddd;
+      background-color: #fff;
+    }
+
+    .destination-name {
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: #2c3e50;
+    }
+
+    .destination-description {
+      font-size: 1rem;
+      color: #7f8c8d;
+    }
+
+    .destination-cost {
+      font-size: 1.1rem;
+      font-weight: bold;
+      margin-top: 10px;
+      color: #e74c3c;
+    }
+
+    .destination-link {
+      display: inline-block;
+      margin-top: 15px;
+      font-weight: bold;
+      color: #3498db;
+      text-decoration: none;
+    }
+
+    .destination-link:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+
+<body>
+  <header class="header" data-header>
+    <div class="container">
+
+      <a href="#">
+        <h1 class="logo">Tourest</h1>
+      </a>
+
+      <button class="nav-toggle-btn" data-nav-toggle-btn aria-label="Toggle Menu">
+        <ion-icon name="menu-outline" class="open"></ion-icon>
+        <ion-icon name="close-outline" class="close"></ion-icon>
+      </button>
+
+      <nav class="navbar">
+
+        <ul class="navbar-list">
+
+          <li>
+            <a href="home.html" class="navbar-link">Home</a>
+          </li>
+
+          <li>
+
+            <a href="about.html" class="navbar-link">About Us</a>
+          </li>
+
+          <li>
+            <a href="tours.html" class="navbar-link">Tours</a>
+          </li>
+
+          <li>
+            <a href="destination.html" class="navbar-link">Destinations</a>
+          </li>
+
+          <li>
+            <a href="login.html" class="navbar-link">User Profile</a>
+          </li>
+          <li>
+
+            <a href="blogs.html" class="navbar-link">Blogs</a>
+          </li>
+
+          <li>
+            <a href="#" class="navbar-link">Card</a>
+          </li>
+
+        </ul>
+
+        <!-- <a href="#" class="btn btn-secondary">Booking Now</a> -->
+
+        <a href="index.html" class="fa-solid fa-user"></a>
+
+      </nav>
+
+    </div>
+  </header>
+
+  <section class="destination-list">
+    <div class="container">
+      <h2 class="section-title">Your Card</h2>
+      
+      {% for i in a %}
+      <div class="destination-item">
+        <h3 class="destination-name">{{i.destination}}, {{i.country}}</h3>
+        <p class="destination-description">
+          {{i.description}}
+        </p>
+        <p class="destination-cost"><strong>Cost:</strong> ${{i.cost}}</p>
+        <a href="payment.html" class="destination-link">Payment</a>
+      </div>
+      {% endfor %}
+  
+      <!-- First section for total cost and payment button -->
+      <div class="total-cost-section">
+        <h3>Total Cost: ${{total}}</h3>
+        <a href="payment.html" class="payment-button">Proceed to Payment</a>
+      </div>
+  
+      
+  
+    </div>
+  </section>
+  
+
+  <footer class="footer" id="footer" style="background-image: url('./images/footer-bg.png')">
+    <div class="container">
+
+      <div class="footer-top">
+
+        <ul class="footer-list">
+
+          <li>
+            <p class="footer-list-title">Top destination</p>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">Indonesia, Jakarta</a>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">Maldives, Malé</a>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">Australia, Canberra</a>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">Thailand, Bangkok</a>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">Morocco, Rabat</a>
+          </li>
+
+        </ul>
+
+        <ul class="footer-list">
+
+          <li>
+            <p class="footer-list-title">Categories</p>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">Travel</a>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">Lifestyle</a>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">Fashion</a>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">Education</a>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">Food & Drink</a>
+          </li>
+
+        </ul>
+
+        <ul class="footer-list">
+
+          <li>
+            <p class="footer-list-title">Quick links</p>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">About</a>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">Contact</a>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">Tours</a>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">Booking</a>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">Terms & Conditions</a>
+          </li>
+
+        </ul>
+
+        <div class="footer-list">
+
+          <p class="footer-list-title">Get a newsletter</p>
+
+          <p class="newsletter-text">
+            For the latest deals and tips, travel no further than your inbox
+          </p>
+
+          <form action="" class="newsletter-form">
+            <input type="email" name="email" required placeholder="Email address" class="newsletter-input">
+
+            <button type="submit" class="btn btn-primary">Subscribe</button>
+          </form>
+
+        </div>
+
+      </div>
+
+      <div class="footer-bottom">
+
+        <a href="#" class="logo">Tourest</a>
+
+        <p class="copyright">
+          &copy; 2024 <a href="#" class="copyright-link">Tourest</a>. All Rights Reserved
+        </p>
+
+        <ul class="social-list">
+
+          <li>
+            <a href="#" class="social-link">
+              <ion-icon name="logo-facebook"></ion-icon>
+            </a>
+          </li>
+
+          <li>
+            <a href="#" class="social-link">
+              <ion-icon name="logo-twitter"></ion-icon>
+            </a>
+          </li>
+
+          <li>
+            <a href="#" class="social-link">
+              <ion-icon name="logo-instagram"></ion-icon>
+            </a>
+          </li>
+
+          <li>
+            <a href="#" class="social-link">
+              <ion-icon name="logo-linkedin"></ion-icon>
+            </a>
+          </li>
+
+          <li>
+            <a href="#" class="social-link">
+              <ion-icon name="logo-google"></ion-icon>
+            </a>
+          </li>
+
+        </ul>
+
+      </div>
+
+    </div>
+  </footer>
+
+</body>
+
+</html>
+
+

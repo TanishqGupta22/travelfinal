@@ -1,0 +1,168 @@
+body {
+    font-family: 'Poppins', Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f2f5;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+header {
+    background-color: #1a237e;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    margin-bottom: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    margin: 0;
+    font-size: 2.5em;
+    font-weight: 600;
+}
+
+.date-selection {
+    background-color: white;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 30px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.date-selection h2 {
+    margin-top: 0;
+    color: #1a237e;
+    font-weight: 600;
+}
+
+.date-inputs {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.date-inputs div {
+    flex: 1;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 600;
+    color: #555;
+}
+
+input[type="date"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+    transition: border-color 0.3s ease;
+}
+
+input[type="date"]:focus {
+    outline: none;
+    border-color: #1a237e;
+}
+
+.total-days {
+    margin-top: 15px;
+    font-weight: 600;
+    color: #1a237e;
+    text-align: center;
+}
+
+.hotel-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.hotel-card {
+    background-color: white;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.hotel-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.hotel-card-inner {
+    padding: 20px;
+}
+
+.hotel-card h2 {
+    font-size: 1.4em;
+    margin: 0 0 15px 0;
+    color: #1a237e;
+}
+
+.hotel-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 4px;
+    margin-bottom: 15px;
+}
+
+.description {
+    font-size: 0.9em;
+    color: #666;
+    margin-bottom: 15px;
+}
+
+.price {
+    font-weight: 600;
+    color: #1a237e;
+    font-size: 1.2em;
+    margin-bottom: 5px;
+}
+
+.total-price {
+    font-weight: 600;
+    color: #4caf50;
+    font-size: 1.1em;
+    margin-bottom: 15px;
+}
+
+.add-to-cart {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    background-color: #1a237e;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-size: 1em;
+    font-weight: 600;
+}
+
+.add-to-cart:hover {
+    background-color: #3949ab;
+}
+
+@media (max-width: 768px) {
+    .date-inputs {
+        flex-direction: column;
+    }
+
+    .hotel-card {
+        max-width: 400px;
+        margin: 0 auto;
+    }
+}

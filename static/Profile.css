@@ -1,0 +1,207 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap'); /* Import a bold and unique font */
+
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+body {
+    font-family: 'serif', serif;
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0; /* Adjusted to 0 for proper centering */
+    overflow: hidden; /* Hide any overflow */
+}
+
+body {
+    background: linear-gradient(45deg, #9e0909, #3c1321, #432968, #004671);
+    background-size: 400% 400%;
+    animation: gradientBG 15s ease infinite;
+}
+
+@keyframes gradientBG {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+@keyframes bounceIn {
+    0% {
+        opacity: 0;
+        transform: translateY(-100px);
+    }
+    60% {
+        opacity: 1;
+        transform: translateY(30px);
+    }
+    80% {
+        transform: translateY(-10px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes rotateIn {
+    from {
+        opacity: 0;
+        transform: rotate(-200deg);
+    }
+    to {
+        opacity: 1;
+        transform: rotate(0deg);
+    }
+}
+
+@keyframes scaleIn {
+    from {
+        opacity: 0;
+        transform: scale(0.5);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.profile-container {
+    display: flex;
+    width: 800px; /* Reduced width */
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Reduced shadow size */
+    border-radius: 8px; /* Slightly smaller border radius */
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Added box-shadow transition */
+}
+
+.profile-container:hover {
+    transform: scale(1.02); /* Slightly smaller scale on hover */
+}
+
+.left-panel, .right-panel {
+    padding: 15px; /* Reduced padding */
+    width: 50%;
+}
+
+.left-panel {
+    background: #020202eb;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+/* Uncomment one of the following sections to apply the desired animation */
+
+/* Bounce Effect */
+.left-panel h2, .left-panel p {
+    animation: bounceIn 1s ease;
+}
+
+/* Rotate Effect */
+ /* .left-panel h2, .left-panel p {
+    animation: rotateIn 1s ease;
+}  */
+
+/* Scale Effect */
+ .left-panel h2, .left-panel p,.left-panel h1 {
+    animation: scaleIn 1s ease;
+} 
+
+.left-panel h2 {
+    margin-bottom: 8px; /* Reduced margin */
+    font-size: 20px; /* Reduced font size */
+}
+
+.left-panel p {
+    font-size: 12px; /* Reduced font size */
+    animation: bounceIn 1s ease 0.5s; /* Delayed animation, if using bounceIn */
+}
+
+.right-panel {
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.profile-heading {
+    text-align: center;
+    margin-bottom: 15px; /* Reduced margin */
+    font-size: 48px; /* Reduced font size */
+    font-family: 'sans-serif', serif; /* Unique bold font */
+    font-weight: 700;
+}
+
+.form-group {
+    margin-bottom: 10px; /* Reduced margin */
+}
+
+.form-group input {
+    width: 100%;
+    padding: 8px; /* Reduced padding */
+    border: 1px solid #ccc;
+    border-radius: 4px; /* Reduced border radius */
+    box-sizing: border-box;
+}
+
+.form-group input:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 4px rgba(0, 123, 255, 0.5); /* Reduced shadow size */
+}
+
+.btn {
+    width: 100%;
+    padding: 8px; /* Reduced padding */
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px; /* Reduced border radius */
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #0056b3;
+    transform: scale(1.02); /* Slightly smaller scale on hover */
+}
+
+.edit-btn {
+    background-color: #152533;
+    margin-bottom: 8px; /* Reduced margin */
+}
+
+.edit-btn:hover {
+    background-color: #101416;
+}
+
+/* Backlight effect for the entire profile container */
+.black-backlight {
+    box-shadow: 0 0 20px 8px rgba(243, 243, 255, 0.811); /* Reduced shadow size */
+}
+
+.parallax {
+    background-image: url('your-image.jpg');
+    min-height: 300px; /* Reduced minimum height */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}

@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tours</title>
+  <link rel="stylesheet" href="../static/tours.css">
+</head>
+
+<body>
+
+
+  <!-- Navbar -->
+  <header class="header" data-header>
+    <div class="container">
+
+      <a href="#">
+        <h1 class="logo">Tourest</h1>
+      </a>
+
+      <button class="nav-toggle-btn" data-nav-toggle-btn aria-label="Toggle Menu">
+        <ion-icon name="menu-outline" class="open"></ion-icon>
+        <ion-icon name="close-outline" class="close"></ion-icon>
+      </button>
+
+      <nav class="navbar">
+
+        <ul class="navbar-list">
+
+          <li>
+            <a href="home.html" class="navbar-link">Home</a>
+          </li>
+
+          <li>
+
+            <a href="about.html" class="navbar-link">About Us</a>
+          </li>
+
+          <li>
+            <a href="tours.html" class="navbar-link">Tours</a>
+          </li>
+
+          <li>
+            <a href="destination.html" class="navbar-link">Destinations</a>
+          </li>
+
+          <li>
+            <a href="login.html" class="navbar-link">User Profile</a>
+          </li>
+          
+
+        </ul>
+
+        <!-- <a href="#" class="btn btn-secondary">Booking Now</a> -->
+
+        <a href="index.html" class="fa-solid fa-user"></a>
+
+      </nav>
+
+    </div>
+  </header>
+
+
+
+
+  <!-- Tours -->
+  <form action="" method="post">
+    <div class="center">
+      <div class="property-card">
+        <a href="#" class="property-link">
+          <div class="property-image destination-1">
+            <div class="property-image-title">
+              <h5>Paris</h5>
+            </div>
+          </div>
+        </a>
+        <div class="property-description">
+          <h5>Paris, France</h5>
+          <p>Experience the romance and charm of the City of Light. Visit iconic landmarks like the Eiffel Tower and
+            indulge in exquisite cuisine.</p>
+        </div>
+        <a href="#" class="property-social-link">
+          <div class="property-social-icons">
+            <input type="checkbox" id="Paris" name="Paris">
+            <label for="Paris"></label>
+            
+          </div>
+        </a>
+      </div>
+
+      <div class="property-card">
+        <a href="#" class="property-link">
+          <div class="property-image destination-2">
+            <div class="property-image-title">
+              <h5>Tokyo</h5>
+            </div>
+          </div>
+        </a>
+        <div class="property-description">
+          <h5>Tokyo, Japan</h5>
+          <p>Immerse yourself in the perfect blend of tradition and modernity. Explore bustling streets, serene temples,
+            and cutting-edge technology.</p>
+        </div>
+        <a href="#" class="property-social-link">
+          <div class="property-social-icons">
+            <input type="checkbox" id="Tokyo" name="Tokyo">
+            <label for="Tokyo"></label>
+          </div>
+        </a>
+      </div>
+
+      <div class="property-card">
+        <a href="#" class="property-link">
+          <div class="property-image destination-3">
+            <div class="property-image-title">
+              <h5>New York</h5>
+            </div>
+          </div>
+        </a>
+        <div class="property-description">
+          <h5>New York City, USA</h5>
+          <p>Discover the city that never sleeps. From Broadway shows to world-class museums, NYC offers endless
+            excitement.</p>
+        </div>
+        <a href="#" class="property-social-link">
+          <div class="property-social-icons">
+            <input type="checkbox" id="New York City" name="USA">
+            <label for="New York City"></label>
+          </div>
+        </a>
+      </div>
+
+      <div class="property-card">
+        <a href="#" class="property-link">
+          <div class="property-image destination-4">
+            <div class="property-image-title">
+              <h5>Bali</h5>
+            </div>
+          </div>
+        </a>
+        <div class="property-description">
+          <h5>Bali, Indonesia</h5>
+          <p>Relax on pristine beaches, explore lush jungles, and immerse yourself in rich Balinese culture and
+            spirituality.</p>
+        </div>
+        <a href="#" class="property-social-link">
+          <div class="property-social-icons">
+            <input type="checkbox" id="Bali" name="Indonesia">
+            <label for="Bali"></label>
+          </div>
+        </a>
+      </div>
+
+      <div class="property-card">
+        <a href="#" class="property-link">
+          <div class="property-image destination-5">
+            <div class="property-image-title">
+              <h5>Rome</h5>
+            </div>
+          </div>
+        </a>
+        <div class="property-description">
+          <h5>Rome, Italy</h5>
+          <p>Step back in time in the Eternal City. Marvel at ancient ruins, indulge in delicious Italian cuisine, and
+            toss a coin in the Trevi Fountain.</p>
+        </div>
+        <a href="#" class="property-social-link">
+          <div class="property-social-icons">
+            <input type="checkbox" id="Rome" name="Italy">
+            <label for="Rome"></label>
+          </div>
+        </a>
+      </div>
+
+      <div class="property-card">
+        <a href="#" class="property-link">
+          <div class="property-image destination-6">
+            <div class="property-image-title">
+              <h5>Sydney</h5>
+            </div>
+          </div>
+        </a>
+        <div class="property-description">
+          <h5>Sydney, Australia</h5>
+          <p>Experience the vibrant culture of Down Under. Visit the iconic Opera House, relax on Bondi Beach, and
+            explore the beautiful harbor.</p>
+        </div>
+        <a href="#" class="property-social-link">
+          <div class="property-social-icons">
+            <input type="checkbox" name="Australia" id="Sydney">
+            <label for="Sydney"></label>
+          </div>
+        </a>
+      </div>
+    </div>
+    <button class="button" role="button">Add to Card</button>
+  </form>
+  <!-- Footer -->
+  <footer class="footer" id="footer" style="background-image: url('./images/footer-bg.png')">
+    <div class="container">
+
+      <div class="footer-top">
+
+        <ul class="footer-list">
+
+          <li>
+            <p class="footer-list-title">Top destination</p>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">Indonesia, Jakarta</a>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">Maldives, Malé</a>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">Australia, Canberra</a>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">Thailand, Bangkok</a>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">Morocco, Rabat</a>
+          </li>
+
+        </ul>
+
+        <ul class="footer-list">
+
+          <li>
+            <p class="footer-list-title">Categories</p>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">Travel</a>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">Lifestyle</a>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">Fashion</a>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">Education</a>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">Food & Drink</a>
+          </li>
+
+        </ul>
+
+        <ul class="footer-list">
+
+          <li>
+            <p class="footer-list-title">Quick links</p>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">About</a>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">Contact</a>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">Tours</a>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">Booking</a>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">Terms & Conditions</a>
+          </li>
+
+        </ul>
+
+        <div class="footer-list">
+
+          <p class="footer-list-title">Get a newsletter</p>
+
+          <p class="newsletter-text">
+            For the latest deals and tips, travel no further than your inbox
+          </p>
+
+          <form action="" class="newsletter-form">
+            <input type="email" name="email" required placeholder="Email address" class="newsletter-input">
+
+            <button type="submit" class="btn btn-primary">Subscribe</button>
+          </form>
+
+        </div>
+
+      </div>
+
+      <div class="footer-bottom">
+
+        <a href="#" class="logo">Tourest</a>
+
+        <p class="copyright">
+          &copy; 2024 <a href="#" class="copyright-link">Tourest</a>. All Rights Reserved
+        </p>
+
+        <ul class="social-list">
+
+          <li>
+            <a href="#" class="social-link">
+              <ion-icon name="logo-facebook"></ion-icon>
+            </a>
+          </li>
+
+          <li>
+            <a href="#" class="social-link">
+              <ion-icon name="logo-twitter"></ion-icon>
+            </a>
+          </li>
+
+          <li>
+            <a href="#" class="social-link">
+              <ion-icon name="logo-instagram"></ion-icon>
+            </a>
+          </li>
+
+          <li>
+            <a href="#" class="social-link">
+              <ion-icon name="logo-linkedin"></ion-icon>
+            </a>
+          </li>
+
+          <li>
+            <a href="#" class="social-link">
+              <ion-icon name="logo-google"></ion-icon>
+            </a>
+          </li>
+
+        </ul>
+
+      </div>
+
+    </div>
+  </footer>
+
+
+
+
+
+  <!-- 
+        - #GO TO TOP
+      -->
+
+  <a href="#top" class="go-top" data-go-top aria-label="Go To Top">
+    <ion-icon name="chevron-up-outline"></ion-icon>
+  </a>
+
+
+
+
+
+  <!-- 
+        - custom js link
+      -->
+  <script src="script.js"></script>
+
+  <!-- 
+        - ionicon link
+      -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+  <script>
+    function scrollToFooter() {
+      document.getElementById('footer').scrollIntoView({
+        behavior: "smooth"
+      });
+    }
+  </script>
+
+
+
+
+
+</body>
+
+</html>

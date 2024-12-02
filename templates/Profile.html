@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../static/style2.css">
+</head>
+<body>
+    <aside class="profile-card">
+        <header>
+          <!-- here’s the avatar -->
+          <a target="_blank" href="#">
+            <img src="http://lorempixel.com/150/150/people/" class="hoverZoomLink">
+          </a>
+      
+          <!-- the username -->
+          <h1>
+                  {{a.name1}} {{a.name2}}
+                </h1>
+      
+          <!-- and role or location -->
+          <h2>
+            Welcome to Code and Compass
+
+                </h2>
+      
+        </header>
+      
+        <!-- bit of a bio; who are you? -->
+        <div class="profile-bio">
+      
+            
+                <div class="form-group">
+                    <label for="phone">Phone No.</label>
+                    <input type="tel" id="phone" name="phone" placeholder="{{a.phoneno}}" required disabled>
+                </div>
+                <div class="form-group">
+                    <label for="mail">Mail.</label>
+                    <input type="mail" id="mail" name="mail" placeholder="{{a.mail}}" required disabled>
+                </div>
+                <div class="form-group">
+                    <label for="password">Password :</label>
+
+                    <input type="text" id="password" name="password" placeholder="********" required disabled>
+                </div>
+                <div class="form-group">
+                    <label for="city">City :</label>
+
+                    <input type="text" id="city" name="city" placeholder="{{a.city}}" required disabled>
+                </div>
+                <div class="form-group">
+                    <label for="district">Districts :</label>
+
+                    <input type="text" id="district" name="district" placeholder="{{a.district}}" required disabled>
+                </div>
+                <div class="form-group">
+                    <button type="button" class="btn edit-btn" onclick="enableEdit()">Edit</button>
+                    <button type="submit" class="btn save-btn">Save</button>
+                </div>
+            
+      
+        </div>
+      
+        <!-- some social links to show off -->
+        
+       
+      </aside>
+    
+</body>
+</html>

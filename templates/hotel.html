@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luxurious Paris Hotel Bookings</title>
+    <link rel="stylesheet" href="../static/hotel.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  
+    <div class="container">
+        <header>
+            <h1>Luxurious Hotel Bookings</h1>
+        </header>
+        
+        <div class="date-selection">
+            <h2>Select Your Stay Dates</h2>
+            <div class="date-inputs">
+                <div>
+                    <label for="check-in">Check-in:</label>
+                    <input type="date" id="check-in" name="check-in">
+                </div>
+                <div>
+                    <label for="check-out">Check-out:</label>
+                    <input type="date" id="check-out" name="check-out">
+                </div>
+            </div>
+            <div id="total-days" class="total-days"></div>
+        </div>
+
+        <div class="hotel-grid">
+          {% for i in a %}
+            <div class="hotel-card" data-base-price="250">
+                <div class="hotel-card-inner">
+                    <h2>{{i.hotel_name}} Hotel</h2>
+                    <img src="https://via.placeholder.com/300x200" alt="Eiffel Tower View Hotel" class="hotel-image">
+                    <h3>{{i.destination}}</h3>
+                    <p class="description">Luxurious hotel with stunning views of the Eiffel Tower</p>
+                    <p class="price">€{{i.price}} per night</p>
+                    <p class="total-price"></p>
+                    <a href="payment.html"><button class="add-to-cart">Payment</button></a>
+                </div>
+            </div>
+            {% endfor %}
+          </div>
+            
+            
+        </div>
+    </div>
+
+    <script src="../static/hotel.js"></script>
+<!-- Code injected by live-server -->
+<script>
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+</body>
+</html>
